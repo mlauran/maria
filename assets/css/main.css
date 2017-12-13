@@ -1,0 +1,18 @@
+.menu.desktop {
+    background: black;
+    text-align: center;
+}
+.menu .nav-item {
+    margin: 20px 10px; /*TRBL*/
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-family: 'Scada', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.menu .nav-item:hover {
+    color: gray;
+}
+
