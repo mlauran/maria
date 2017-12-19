@@ -1,3 +1,5 @@
+body {margin:0}
+
 nav { grid-area: nav; background:pink }
 #videobackground {grid-area: videobackground; background:blue}
 #eventroll { grid-area: eventroll; }
@@ -8,8 +10,8 @@ footer { grid-area: footer; }
   display: grid;
   grid-template-areas:
     'nav nav nav'
-    'sidebar videobackground videobackground'
-    'sidebar eventroll eventroll'
+    'videobackground videobackground videobackground'
+    'eventroll eventroll sidebar'
     'footer footer footer';
   grid-gap: 1px;
   background-color: #2196F3;
@@ -18,10 +20,10 @@ footer { grid-area: footer; }
 #grid-container > div, footer, nav {
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
-  padding: 20px 0;
   font-size: 30px;
 }
 
+<<<<<<< HEAD
 
 
 .menu.desktop {
@@ -41,3 +43,18 @@ footer { grid-area: footer; }
 .menu .nav-item:hover {
   color: gray;
 }
+=======
+#videobackground {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+#videobackground iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+>>>>>>> b66db6d0af1763deb5fb5db8fa3495a1efb1ef00
