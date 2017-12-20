@@ -15,7 +15,9 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/custom.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Heebo:900" rel="stylesheet">
 
 </head>
 
@@ -23,29 +25,75 @@
     <div id="grid-container">
         <nav>
             <div id="logo-holder">
-               <a href="#">
-                   <img src="//img/sylogo.png" alt="logo">
+                <a href="#" id="logo">
+                    <img src="http://d1qmdf3vop2l07.cloudfront.net/big-antelope.cloudvent.net/compressed/16e9cf76d8960d70885d61fd8312a3c8.png"
+                        alt="logo">
                 </a>
             </div>
             <div id="middle-nav">
-                <a class="nav-item" href="#">artists</a>
-                <a class="nav-item" href="#">tickets</a>
-                <a class="nav-item" href="#">Location</a>
-                <a class="nav-item" href="#">Blog</a>
-                <a class="nav-item" href="#">contact</a>
-                <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,400,700,900" rel="stylesheet">
+                <a class="nav-item" href="#">Calendar</a>
+                <a class="nav-item" href="#">Gallery</a>
+                <a class="nav-item" href="#">Shop</a>
             </div>
-            <div id="social-buttons">social buttons</div>
+            <div id="social-buttons">
+                <a class="btn btn-social-icon btn-twitter">
+                    <span class="fa fa-twitter"></span>
+                </a>
+            </div>
         </nav>
         <div id="videobackground">
-            <!-- <div class="video-foreground">
-                  <iframe src="https://www.youtube.com/embed/vCrwWTkcYbM?controls=0&showinfo=0&rel=0&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
-                </div> -->
-            video
+            <div class="video-foreground">
+                <iframe src="https://www.youtube.com/embed/vCrwWTkcYbM?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&autohide=1" frameborder="0"
+                    allowfullscreen></iframe>
+            </div>
         </div>
-
-        <div id="sidebar">sidebar</div>
-        <div id="eventroll">event</div>
+        <div id="eventroll">
+            <h2 id="upcoming-events">Upcoming Events</h2>
+            <div class="event">
+                <span class="event-pic">
+                    <img src="https://nightout.s3.amazonaws.com/media/posters/40031/medium-6ca81a7c598a5230.png?1511231824">
+                </span>
+                <span class="event-details">
+                    <h4>Sat, Jan 20 | Doors at: 10:00pm</h4>
+                    <div>SPACE YACHT SF</div>
+                    <a class="btn pill">Get Tickets</a>
+                </span>
+            </div>
+            <div class="event">
+                <span class="event-pic">
+                    <img src="https://nightout.s3.amazonaws.com/media/posters/40031/medium-6ca81a7c598a5230.png?1511231824">
+                </span>
+                <span class="event-details">
+                    <h4>Sat, Jan 20 | Doors at: 10:00pm</h4>
+                    <div>SPACE YACHT SF</div>
+                    <a class="btn pill">Get Tickets</a>
+                </span>
+            </div>
+            <div class="event">
+                <span class="event-pic">
+                    <img src="https://nightout.s3.amazonaws.com/media/posters/40031/medium-6ca81a7c598a5230.png?1511231824">
+                </span>
+                <span class="event-details">
+                    <h4>Sat, Jan 20 | Doors at: 10:00pm</h4>
+                    <div>SPACE YACHT SF</div>
+                    <a class="btn pill">Get Tickets</a>
+                </span>
+            </div>
+            <div class="event">
+                <span class="event-pic">
+                    <img src="https://nightout.s3.amazonaws.com/media/posters/40031/medium-6ca81a7c598a5230.png?1511231824">
+                </span>
+                <span class="event-details">
+                    <h4>Sat, Jan 20 | Doors at: 10:00pm</h4>
+                    <div>SPACE YACHT SF</div>
+                    <a class="btn pill">Get Tickets</a>
+                </span>
+            </div>
+        </div>
+        <div id="sidebar">
+            <iframe src="https://open.spotify.com/embed?uri=spotify:user:spotify:playlist:3rgsDhGHZxZ9sB9DQWQfuf" width="100%" height="380"
+                frameborder="0" allowtransparency="true"></iframe>
+        </div>
         <footer>footer</footer>
     </div>
     <script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script>

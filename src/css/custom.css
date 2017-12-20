@@ -1,8 +1,16 @@
 body {margin:0}
-*{font-family: 'Nunito Sans', sans-serif;}
+* {font-family: 'Nunito Sans', sans-serif;}
+
+h1,h2,h3,h4 {
+  font-family: 'Heebo', sans-serif;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+h4 {font-size:22px}
 
 nav { grid-area: nav; background:pink }
-#videobackground {grid-area: videobackground; background:blue}
+#videobackground {grid-area: videobackground;}
 #eventroll { grid-area: eventroll; }
 #sidebar { grid-area: sidebar; }
 footer { grid-area: footer; }
@@ -10,30 +18,29 @@ footer { grid-area: footer; }
 #grid-container {
   display: grid;
   grid-template-areas:
-    'nav nav nav'
-    'videobackground videobackground videobackground'
-    'eventroll eventroll sidebar'
-    'footer footer footer';
-  grid-gap: 1px;
-  background-color: #2196F3;
+    'nav nav nav nav nav'
+    'videobackground videobackground videobackground videobackground videobackground'
+    'eventroll eventroll eventroll eventroll sidebar'
+    'footer footer footer footer footer';
+  grid-gap: 0px;
   padding: 0px;
 }
+
 #grid-container > div, footer, nav {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
   font-size: 30px;
 }
 
 nav {background:black; display:flex}
-
 nav #logo-holder {
   flex-grow:1;
   text-align: left;
   padding-top: 10px;
+  width:25%;
 }
-nav #logo {
-  width: 200px;
-  height: 43px;
+
+nav #logo-holder #logo img {
+    width: 200px;
+    height: 43px;
 }
 
 nav a.nav-item {
@@ -43,26 +50,93 @@ nav a.nav-item {
   box-sizing: border-box;
   display: inline-flex;
   font-weight: 200;
-  margin: 23px 18px;
+  margin: 23px 5px;
   text-transform: uppercase;
   text-decoration-line: none;
-  
+  letter-spacing: 2px;
 }
 
-#middle-nav {flex-grow:1}
+#middle-nav {flex-grow:1; width:50%; text-align: center}
 
-#social-buttons {flex-grow:1}
+#social-buttons {flex-grow:1; width: 25%}
 
-/* #videobackground {
-	position: relative;
-	padding-bottom: 56.25%;
-	padding-top: 25px;
-	height: 0;
+#videobackground {
+  position: relative;
+	padding-bottom: 25.25%;
+	padding-top: 0px;
+  height: 0;
+  overflow:hidden
 }
 #videobackground iframe {
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-} */
+	top: -75%;
+	left: -75%;
+	width: 250%;
+  height: 250%;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+#eventroll {
+  padding:20px;
+  margin-top: -50px;
+  z-index: 1;
+  background-color: transparent;
+}
+
+#eventroll #upcoming-events {
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  display:inline-block;
+}
+
+#eventroll .event {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-areas: 
+  'event-pic event-details';
+  padding: 5px;
+  border: 5px solid;
+  margin-bottom:20px;
+}
+
+#eventroll .event .event-pic img {
+  width:250px
+}
+
+#eventroll .event .event-pic {
+  grid-area: event-pic
+}
+
+#eventroll .event .event-details {
+  grid-area: event-details
+}
+
+#eventroll .event .btn.pill{
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+  border: 1px solid;
+  font-size: 14px;
+  padding:10px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 768px) {
+
+  #grid-container {
+    display: grid;
+    grid-template-areas:
+      'nav'
+      'videobackground'
+      'eventroll'
+      'sidebar'
+      'footer';
+    grid-gap: 0px;
+    padding: 0px;
+  }
+
+}
