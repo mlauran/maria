@@ -1,8 +1,36 @@
+@font-face {
+  font-family: 'Regular';
+  src: url('../fonts/DINNextLTPro-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/DINNextLTPro-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/DINNextLTPro-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/DINNextLTPro-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/DINNextLTPro-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Cond';
+  src: url('../fonts/DINNextLTPro-MediumCond.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/DINNextLTPro-MediumCond.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/DINNextLTPro-MediumCond.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/DINNextLTPro-MediumCond.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/DINNextLTPro-MediumCond.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Bold';
+  src: url('../fonts/DINNextLTPro-Heavy.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/DINNextLTPro-Heavy.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/DINNextLTPro-Heavy.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/DINNextLTPro-Heavy.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/DINNextLTPro-Heavy.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/DINNextLTPro-Heavy.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
 body {margin:0}
 * {font-family: 'Nunito Sans', sans-serif;}
 
 h1,h2,h3,h4 {
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Bold';
   text-transform: uppercase;
   margin: 0px;
 }
