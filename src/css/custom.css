@@ -27,7 +27,7 @@
 }
 
 body {margin:0}
-* {font-family: 'Nunito Sans', sans-serif;}
+* {font-family: 'Regular'}
 
 h1,h2,h3,h4 {
   font-family: 'Bold';
@@ -37,7 +37,7 @@ h1,h2,h3,h4 {
 
 h4 {font-size:22px}
 
-nav { grid-area: nav; background:pink }
+nav { font-family:'Cond'; grid-area: nav; background:pink }
 #videobackground {grid-area: videobackground;}
 #eventroll { grid-area: eventroll; }
 #sidebar { grid-area: sidebar; }
@@ -67,8 +67,8 @@ nav #logo-holder {
 }
 
 nav #logo-holder #logo img {
-    width: 200px;
-    height: 43px;
+    width: 150px;
+    margin-left: 10px;
 }
 
 nav a.nav-item {
@@ -138,16 +138,17 @@ nav a.nav-item {
 
 #eventroll .event {
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: 250px 1fr;
   grid-template-areas: 
   'event-pic event-details';
-  padding: 5px;
-  border: 5px solid;
+  padding: 0px;
+  border: 0px solid;
   margin-bottom:20px;
+  background-color: rgb(247, 247, 247);
 }
 
 #eventroll .event .event-pic img {
-  width:250px
+  width:100%
 }
 
 #eventroll .event .event-pic {
@@ -155,13 +156,11 @@ nav a.nav-item {
 }
 
 #eventroll .event .event-details {
-  grid-area: event-details
+  grid-area: event-details;
+  padding:20px;
 }
 
-#eventroll .event .btn.pill{
-  -webkit-border-radius: 16px;
-  -moz-border-radius: 16px;
-  border-radius: 16px;
+#eventroll .event .btn.pill {
   border: 1px solid;
   font-size: 14px;
   padding:10px;
@@ -173,6 +172,17 @@ nav a.nav-item {
 
 @media screen and (max-width: 768px) {
 
+  h2 {font-size:30px}
+
+  #grid-container {
+    grid-template-areas:
+      'nav nav nav nav nav'
+      'videobackground videobackground videobackground videobackground videobackground'
+      'sidebar'
+      'eventroll'
+      'footer footer footer footer footer';
+  }
+
   #grid-container {
     display: grid;
     grid-template-areas:
@@ -183,6 +193,31 @@ nav a.nav-item {
       'footer';
     grid-gap: 0px;
     padding: 0px;
+  }
+
+  #eventroll {margin-top:0}
+
+  #eventroll .event {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'event-pic'
+    'event-details'
+    ;
+    padding: 0px;
+    border: 0px solid;
+    margin-bottom:20px;
+    background-color: rgb(247, 247, 247);
+  }
+
+  #eventroll .event .btn.pill {
+    display:block;
+    padding:20px;
+    text-align: center;
+  }
+
+  #eventroll .event .event-details {
+    padding:20px 0 0 0;
   }
 
 }
