@@ -56,6 +56,10 @@ nav a.nav-item {
   letter-spacing: 2px;
 }
 
+#sidebar > iframe {
+  position: relative;
+}
+
 #middle-nav {flex-grow:1; width:50%; text-align: center}
 
 #social-buttons {flex-grow:1; width: 25%}
@@ -93,6 +97,8 @@ nav a.nav-item {
 }
 
 #eventroll .event {
+  background-color: white;
+  position: relative;
   display: grid;
   grid-template-columns: 260px 1fr;
   grid-template-areas: 
