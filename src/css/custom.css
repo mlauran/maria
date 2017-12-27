@@ -144,7 +144,7 @@ nav a.nav-item {
   padding: 0px;
   border: 0px solid;
   margin-bottom:20px;
-  background-color: rgb(247, 247, 247);
+  border-bottom:1px solid rgb(224, 224, 224);
 }
 
 #eventroll .event .event-pic img {
@@ -170,30 +170,35 @@ nav a.nav-item {
   text-decoration: none;
 }
 
-@media screen and (max-width: 768px) {
+footer {
+  
+}
+
+@media screen and (max-width: 900px) {
+
+  nav {display:block}
+  nav #logo-holder {width:100%; text-align: center; padding-top:0}
+  nav #logo-holder #logo img {margin:0}
+  nav a.nav-item {margin-top: 5px; margin-bottom: 5px; display: inline; }
+  #middle-nav {width:100%}
 
   h2 {font-size:30px}
-
-  #grid-container {
-    grid-template-areas:
-      'nav nav nav nav nav'
-      'videobackground videobackground videobackground videobackground videobackground'
-      'sidebar'
-      'eventroll'
-      'footer footer footer footer footer';
-  }
 
   #grid-container {
     display: grid;
     grid-template-areas:
       'nav'
       'videobackground'
-      'eventroll'
       'sidebar'
+      'eventroll'
       'footer';
     grid-gap: 0px;
     padding: 0px;
   }
+
+  #videobackground {display:none}
+
+  #sidebar {display:none}
 
   #eventroll {margin-top:0}
 
@@ -207,7 +212,6 @@ nav a.nav-item {
     padding: 0px;
     border: 0px solid;
     margin-bottom:20px;
-    background-color: rgb(247, 247, 247);
   }
 
   #eventroll .event .btn.pill {
