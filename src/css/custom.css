@@ -26,7 +26,7 @@
        url('../fonts/DINNextLTPro-Heavy.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
-body {margin:0}
+body {margin:0; background:#1d1818}
 * {font-family: 'Regular'}
 
 h1,h2,h3,h4 {
@@ -37,13 +37,14 @@ h1,h2,h3,h4 {
 
 h4 {font-size:22px}
 
-nav { font-family:'Cond'; grid-area: nav; background:pink }
+nav { font-family:'Cond'; grid-area: nav;}
 #videobackground {grid-area: videobackground;}
 #eventroll { grid-area: eventroll; }
 #sidebar { grid-area: sidebar; }
 footer { grid-area: footer; }
 
 #grid-container {
+  background: #FFF;
   display: grid;
   grid-template-areas:
     'nav nav nav nav nav'
@@ -58,17 +59,21 @@ footer { grid-area: footer; }
   font-size: 30px;
 }
 
-nav {background:black; display:flex}
+nav {
+  background: #1d1818; 
+
+  z-index: 10;
+  width: 100%;
+}
+
 nav #logo-holder {
   flex-grow:1;
-  text-align: left;
-  padding-top: 10px;
-  width:25%;
+  text-align: center;
+  padding-top: 0px;
 }
 
 nav #logo-holder #logo img {
-    width: 150px;
-    margin-left: 10px;
+    width: 250px;
 }
 
 nav a.nav-item, footer a.nav-item  {
@@ -78,7 +83,7 @@ nav a.nav-item, footer a.nav-item  {
   box-sizing: border-box;
   display: inline-flex;
   font-weight: 200;
-  margin: 23px 5px;
+  margin: 0px 5px;
   text-transform: uppercase;
   text-decoration-line: none;
   letter-spacing: 2px;
@@ -86,11 +91,25 @@ nav a.nav-item, footer a.nav-item  {
 
 nav a.nav-item.spotify-nav {display:none}
 
+/* Nav Flex */
+nav.flex-nav { display:flex; }
+nav.flex-nav #logo-holder { text-align:left; margin-left:15px; width:25%; flex-grow: 0; }
+nav.flex-nav #logo-holder #logo img {width: 150px;}
+nav.flex-nav #middle-nav {text-align: center;display: flex;align-items: center;width: 50%;justify-content: center;}
+
+#sidebar {background: #000}
+
 #sidebar > iframe {
   position: relative;
+  height: 1205px;
 }
 
-#middle-nav {flex-grow:1; width:50%; text-align: center}
+#middle-nav {
+  text-align: center; 
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
 
 #social-buttons {flex-grow:1; width: 25%}
 
@@ -121,29 +140,31 @@ nav a.nav-item.spotify-nav {display:none}
 #eventroll #upcoming-events {
   background: #000;
   color: #fff;
-  padding: 10px 20px;
-  margin-bottom: 1px;
+  margin-bottom: 20px;
   display:inline-block;
-  outline: 1px solid #fff;
+  outline: 0px solid #fff;
+}
+
+#upcoming-events h2 {    
+  padding: 10px 10px 0px;
+  line-height: normal;
 }
 
 #eventroll #city-tabs {
   display: grid-inline;
-  margin-bottom:20px;
 }
 
 #eventroll #city-tabs span {
   color:#fff;
   display:inline-block;
   padding:10px;
-  background:#999;
   flex-grow: 1;
   font-size:22px;
   font-weight: 200;
 }
 
 #eventroll .event {
-  background-color: white;
+  background-color: #000;
   position: relative;
   display: grid;
   grid-template-columns: 250px 1fr;
@@ -152,7 +173,8 @@ nav a.nav-item.spotify-nav {display:none}
   padding: 0px;
   border: 0px solid;
   margin-bottom:20px;
-  border-bottom:1px solid rgb(224, 224, 224);
+  border-bottom:0px solid rgb(224, 224, 224);
+  color: #FFF;
 }
 
 #eventroll .event .event-pic img {
@@ -166,6 +188,7 @@ nav a.nav-item.spotify-nav {display:none}
 #eventroll .event .event-details {
   grid-area: event-details;
   padding:20px;
+  width: 100%;
 }
 
 #eventroll .event .btn.pill {
@@ -173,13 +196,13 @@ nav a.nav-item.spotify-nav {display:none}
   font-size: 14px;
   padding:10px;
   text-transform: uppercase;
-  font-weight: 900;
-  color: #000;
+  font-weight: 900; 
+  color: #FFF;
   text-decoration: none;
 }
 
 footer {
-  background: #000; padding:20px;
+  background: #1d1818; padding:20px;
 }
 
 footer ul {padding:0; margin:0; text-align: center}
@@ -192,7 +215,7 @@ footer #copyright {text-align: center; color:#fff; font-size:12px; font-weight: 
   nav #logo-holder {width:100%; text-align: center; padding-top:0}
   nav #logo-holder #logo img {margin:0}
   nav a.nav-item {margin-top: 5px; margin-bottom: 5px; display: inline; }
-  #middle-nav {width:100%}
+  #middle-nav {width:100%; background: }
 
   nav a.nav-item.spotify-nav {display:inline}
 
@@ -241,6 +264,7 @@ footer #copyright {text-align: center; color:#fff; font-size:12px; font-weight: 
 
   #eventroll .event .event-details {
     padding:20px 0 0 0;
+    text-align: center;
   }
 
 }
